@@ -101,3 +101,17 @@ System.out.println("LITERAL NUMBER");
 		bufferedReader.close();
 }
 }
+
+
+//input File
+START 100 READ A
+LABEL MOVER	AREG, B LTORG
+MOVER	AREG, ='5'
+ADD	AREG, ='1' MOVEM	AREG, A
+ 
+LTORG
+MOVER	BREG, ='2' LOOP READ B
+MOVEM	BREG, B
+A	DS	1
+B	DC	1 END
+
